@@ -1,5 +1,5 @@
-
-public class hw2 {
+package Hw2;
+public class Hw2 {
 	public static void main(String[] args) {
 //		1.使用for迴圈+ while迴圈
 		for(int y=1;y<=9;y++) {
@@ -59,27 +59,22 @@ public class hw2 {
 			System.out.print(square+" ");
 		}
 		System.out.println();
-/*		阿文很熱衷大樂透 (1 ~ 49),但他不喜歡有4的數字,不論是個位數或是十位數。請設計一隻程式,
+/*		8.阿文很熱衷大樂透 (1 ~ 49),但他不喜歡有4的數字,不論是個位數或是十位數。請設計一隻程式,
 		輸出結果為阿文可以選擇的數字有哪些?總共有幾個?*/
-		int times=0;
-		for(int A=0;A<5;A++) {
-			if(A==4) {
+		int times=1;
+		for(int A=1;A<=49;A++) {
+			if(A%10==4) {
 				continue;
+			}else if(A/10==4){
+				continue;
+			}else {
+				System.out.print(A+",");
 			}
-			int ten=A*10;
-				for(int B=0;B<=9;B++) {
-					if(B==4) {
-						continue;
-					}
-					int SUM=ten+B;
-					System.out.print(SUM+",");
-					times++;
-				}
-		//System.out.println("次數："+times);
+			times+=1;
 		}
 		System.out.println();
 		System.out.println("總共次數："+times);
-/*		請設計一隻Java程式,輸出結果為以下:
+/*		9.請設計一隻Java程式,輸出結果為以下:
 		1 2 3 4 5 6 7 8 9 10
 		1 2 3 4 5 6 7 8 9
 		1 2 3 4 5 6 7 8
@@ -96,7 +91,7 @@ public class hw2 {
 			}
 			System.out.println("");
 		}
-/*		請設計一隻Java程式,輸出結果為以下:
+/*		10.請設計一隻Java程式,輸出結果為以下:
 		65	A
 		66	BB
 		67	CCC
