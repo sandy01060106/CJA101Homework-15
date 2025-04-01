@@ -119,7 +119,7 @@ public class Hw3 {
         }
         // 亂數選取 6 個不重複的號碼
         Collections.shuffle(availableNumbers);
-        List<Integer> selectedNumbers = availableNumbers.subList(0, 6);
+        List<Integer> selectedNumbers = availableNumbers.subList(0, 6);//洗牌後抓取前六個數字
         System.out.println("隨機選出的 6 個號碼：" + selectedNumbers);
 	}
 }
