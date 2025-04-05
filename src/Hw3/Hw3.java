@@ -17,7 +17,7 @@ public class Hw3 {
 					break;
 				}else {
 					System.out.println("輸入錯誤，請重新輸入");
-					sc1.nextLine(); // 清除整行輸入，避免無窮迴圈
+					sc1.nextLine(); // 讀取整行輸入，避免無窮迴圈
 				}
 			}
 		}

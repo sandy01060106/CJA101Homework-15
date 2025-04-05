@@ -15,23 +15,21 @@ public class Calculator {
 
 	}
 	
-	public Calculator(int x, int y) {
-		result=(int) Math.pow(x, y);
-		
+	public Calculator(int x, int y) throws CalException{
+		setNumber(x, y);
 	}
 	
-	public void setNumber(int x,int y){
-		try{
-			if(x==0 & y==0) {
-				throw  new CalException("X跟Y不可以為0"); 
-				}else if(y<0) {
-					throw  new CalException("y不能小於0");
-				}
-		}catch(CalException e) {
-			System.out.println(e.getMessage());
+	public void setNumber(int x,int y)throws CalException{
+		if(x==0 & y==0) {
+			throw  new CalException("X跟Y不可以為0"); 
+		}else if(y<0) {
+			throw  new CalException("y不能小於0");
 		}
+		this.x=x;
+		this.y=y;
+		result=(int) Math.pow(x, y);
 	}
-	
+		
 	public int getResult() {
 		return result;
 	}
